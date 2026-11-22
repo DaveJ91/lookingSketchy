@@ -1,0 +1,90 @@
+/* =========================================================================
+   DESIGN TOKENS: LIGHT CYBERPUNK SKETCHBOOK — TEXTBOOK v2.0
+   ========================================================================= */
+:root {
+  --bg-paper: #F4F6FC;
+  --bg-card: #FFFFFF;
+  --bg-tint: #EEF2FC;
+  --ink: #141836;
+  --ink-body: #252B48;
+  --ink-muted: #525B7A;
+  --dot-grid: #CBD5E1;
+
+  --cyan: #0EA5E9;
+  --cyan-bright: #00D4FF;
+  --cyan-wash: rgba(14, 165, 233, 0.14);
+
+  --magenta: #EC4899;
+  --magenta-deep: #BE185D;
+  --magenta-wash: rgba(236, 72, 153, 0.13);
+
+  --violet: #7C3AED;
+  --violet-wash: rgba(124, 58, 237, 0.12);
+
+  --mint: #10B981;
+  --mint-deep: #047857;
+  --mint-wash: rgba(16, 185, 129, 0.15);
+
+  --amber: #F59E0B;
+  --amber-deep: #B45309;
+  --amber-wash: rgba(245, 158, 11, 0.16);
+
+  --grey: #94A3B8;
+  --grey-light: #CBD5E1;
+
+  --font-script: 'Playwrite IT Moderna', cursive;
+  --font-prose: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-sketch: 'Patrick Hand', cursive;
+  --font-mono: 'IBM Plex Mono', monospace;
+
+  --sidebar-w: 300px;
+  --shadow-cyber: 4px 4px 0 #141836;
+  --shadow-sm: 3px 3px 0 #141836;
+  --radius-lg: 14px;
+  --radius-md: 10px;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-paper);
+  background-image: radial-gradient(var(--dot-grid) 1.25px, transparent 1.25px);
+  background-size: 20px 20px;
+  color: var(--ink-body);
+  font-family: var(--font-prose);
+  font-size: 16.5px;
+  line-height: 1.78;
+  min-height: 100vh;
+  overflow-x: hidden;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+code {
+  font-family: var(--font-mono);
+  font-size: 0.88em;
+  background: var(--bg-tint);
+  border: 1px solid rgba(20, 24, 54, 0.16);
+  border-radius: 5px;
+  padding: 1px 5px;
+  color: var(--ink);
+}
+
+kbd {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 700;
+  background: var(--bg-tint);
+  border: 1px solid rgba(20, 24, 54, 0.35);
+  border-radius: 4px;
+  padding: 1px 5px;
+  color: var(--ink);
+}

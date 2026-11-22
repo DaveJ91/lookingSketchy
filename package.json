@@ -1,0 +1,16 @@
+{
+  "name": "looking-sketchy",
+  "version": "2.5.0",
+  "private": true,
+  "type": "module",
+  "description": "Looking Sketchy — Interactive Visual Thinking, Sketching & Non-Artist Illustration Studio",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^6.0.0",
+    "vite-plugin-singlefile": "^2.0.3"
+  }
+}

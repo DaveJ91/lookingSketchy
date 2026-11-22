@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Looking Sketchy — Interactive Visual Thinking &amp; Sketchbook Studio</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 80'%3E%3Crect x='9' y='9' width='66' height='66' rx='15' fill='%23141836'/%3E%3Crect x='4' y='4' width='66' height='66' rx='15' fill='%23FFFDF5' stroke='%23141836' stroke-width='3'/%3E%3Cpath d='M14 27Q37 22 60 27' fill='none' stroke='%23141836' stroke-width='3.2' stroke-linecap='round'/%3E%3Cpath d='M23 25L27 12Q37 10 47 12L51 25Z' fill='%23EEF2FC' stroke='%23141836' stroke-width='2.4'/%3E%3Cline x1='24' y1='22' x2='50' y2='22' stroke='%23EC4899' stroke-width='2.8'/%3E%3Crect x='23' y='28' width='28' height='12' rx='2' fill='%23141836'/%3E%3Ccircle cx='32' cy='34' r='2.8' fill='%2300D4FF'/%3E%3Ccircle cx='44' cy='34' r='2.8' fill='%2300D4FF'/%3E%3Ccircle cx='33.4' cy='34' r='1.2' fill='%23141836'/%3E%3Ccircle cx='45.4' cy='34' r='1.2' fill='%23141836'/%3E%3Cpolygon points='15,44 26,39 37,51 48,39 59,44 54,62 20,62' fill='%23FFFDF5' stroke='%23141836' stroke-width='2.4'/%3E%3Cpath d='M22 46L19 56M27 45L23 58M48 45L52 58M53 46L56 56' stroke='%230EA5E9' stroke-width='1.5'/%3E%3Cline x1='37' y1='51' x2='37' y2='62' stroke='%23141836' stroke-width='2'/%3E%3C/svg%3E" />
+
+  <!-- Separate Google Fonts links for reliable rendering -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playwrite+IT+Moderna:wght@400&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <!-- Hidden SVG Filter Defs: Subtle Pigment Ink Tooth on Drawn Geometry (Text Stays Crisp) -->
+  <svg width="0" height="0" style="position:absolute; pointer-events:none;" aria-hidden="true">
+    <defs>
+      <filter id="ls-ink-filter" x="-10%" y="-10%" width="120%" height="120%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.032" numOctaves="2" seed="7" result="noise"/>
+        <feDisplacementMap in="SourceGraphic" in2="noise" scale="1.25" xChannelSelector="R" yChannelSelector="G"/>
+      </filter>
+    </defs>
+  </svg>
+  <div class="reader-shell">
+    <!-- LEFT FIXED TABLE OF CONTENTS SIDEBAR -->
+    <aside id="toc-sidebar" class="toc-sidebar" aria-label="Textbook Table of Contents">
+      <div class="toc-brand">
+        <div class="toc-brand-top">
+          <button class="toc-book-btn" data-nav="cover">
+            <span class="toc-brand-mark" aria-hidden="true">
+              <svg viewBox="0 0 80 80">
+                <rect x="9" y="9" width="66" height="66" rx="15" fill="#141836"/>
+                <rect x="4" y="4" width="66" height="66" rx="15" fill="#FFFDF5" stroke="#141836" stroke-width="3"/>
+                <path d="M 14 27 Q 37 22 60 27" fill="none" stroke="#141836" stroke-width="3.2" stroke-linecap="round"/>
+                <path d="M 16 28.5 Q 37 24 58 28.5" fill="none" stroke="#141836" stroke-width="1.2" opacity="0.6"/>
+                <path d="M 23 25 L 27 12 Q 37 10 47 12 L 51 25 Z" fill="#EEF2FC" stroke="#141836" stroke-width="2.4" stroke-linejoin="round"/>
+                <path d="M 28 14 L 25 22 M 34 12 L 30 23 M 40 12 L 36 23 M 46 13 L 42 23" stroke="#141836" stroke-width="1.2" opacity="0.55"/>
+                <line x1="24" y1="22" x2="50" y2="22" stroke="#EC4899" stroke-width="2.8"/>
+                <rect x="23" y="28" width="28" height="12" rx="2" fill="#141836"/>
+                <circle cx="32" cy="34" r="2.8" fill="#00D4FF"/>
+                <circle cx="44" cy="34" r="2.8" fill="#00D4FF"/>
+                <circle cx="33.4" cy="34" r="1.2" fill="#141836"/>
+                <circle cx="45.4" cy="34" r="1.2" fill="#141836"/>
+                <polygon points="15,44 26,39 37,51 48,39 59,44 54,62 20,62" fill="#FFFDF5" stroke="#141836" stroke-width="2.4" stroke-linejoin="round"/>
+                <path d="M 22 46 L 19 56 M 27 45 L 23 58 M 48 45 L 52 58 M 53 46 L 56 56" stroke="#0EA5E9" stroke-width="1.4" opacity="0.65"/>
+                <line x1="37" y1="51" x2="37" y2="62" stroke="#141836" stroke-width="2"/>
+              </svg>
+            </span>
+            <span>
+              <div class="mono toc-kicker">Visual Thinking Studio</div>
+              <div class="toc-book-title">Looking Sketchy</div>
+            </span>
+          </button>
+          <button id="toc-close-mobile" class="toc-close-mobile" aria-label="Close Contents">✕</button>
+        </div>
+
+        <button id="sidebar-search-btn" class="toc-search-trigger" title="Search chapters, labs, icons & glossary (⌘K)">
+          <span>⌕ Search textbook…</span>
+          <kbd class="mono">⌘K</kbd>
+        </button>
+
+        <div class="toc-progress-wrap">
+          <div class="toc-progress-meta">
+            <span>Mastery Progress</span>
+            <span id="toc-progress-txt">0 / 18 Ch • 0 Quizzes</span>
+          </div>
+          <div class="progress-rail"><div id="toc-progress-fill" class="progress-fill"></div></div>
+        </div>
+
+        <div class="toc-mode-tabs" role="group" aria-label="Filter navigation">
+          <button class="toc-mode-btn active" data-toc-mode="all">All</button>
+          <button class="toc-mode-btn" data-toc-mode="chapters">Chapters (18)</button>
+          <button class="toc-mode-btn" data-toc-mode="studios">Studios (16)</button>
+        </div>
+      </div>
+
+      <div id="toc-scroll" class="toc-scroll">
+        <!-- Populated dynamically -->
+      </div>
+
+      <div class="toc-foot">
+        <button id="btn-open-progress" class="toc-foot-btn">⇅ Export / Import Progress</button>
+      </div>
+    </aside>
+
+    <div id="toc-backdrop" class="toc-backdrop"></div>
+
+    <!-- RIGHT SINGLE-CHAPTER READING PANE -->
+    <div class="reader-main">
+      <header class="reader-topbar no-print">
+        <div class="topbar-left">
+          <button id="mobile-menu-btn" class="mobile-menu-btn">☰ Chapters</button>
+          <span id="topbar-crumb" class="breadcrumb">Book Cover &amp; Overview</span>
+        </div>
+        <div class="topbar-actions">
+          <button class="btn secondary" data-nav="cover">⌂ Overview</button>
+          <button id="topbar-search-btn" class="btn secondary" title="Search (⌘K)">⌕ <span class="hide-sm">Search</span> <kbd class="mono">⌘K</kbd></button>
+          <button class="btn secondary" data-nav="appE">❖ Mind Maps</button>
+          <button class="btn secondary" data-nav="appD">✎ Draw School</button>
+          <button class="btn secondary" data-nav="appC">★ Steal Book</button>
+          <button class="btn secondary" data-nav="appB">⎙ Workbook</button>
+          <button id="btn-ink-tooth" class="btn secondary" title="Toggle organic hand-drawn ink texture on illustrations">✎ Ink Tooth</button>
+          <button id="btn-print-ch" class="btn">⎙ Print</button>
+        </div>
+        <div class="read-progress-track" aria-hidden="true"><div id="read-progress-bar" class="read-progress-bar"></div></div>
+      </header>
+
+      <article id="chapter-mount" class="chapter-stage" aria-live="polite">
+        <!-- Active chapter renders here -->
+      </article>
+    </div>
+  </div>
+
+  <!-- ⌘K COMMAND PALETTE MODAL -->
+  <div id="cmd-modal" class="modal-overlay no-print" hidden>
+    <div class="modal-card" role="dialog" aria-modal="true" aria-label="Search Textbook">
+      <div class="modal-head">
+        <input id="cmd-input" class="cmd-input" type="text" placeholder="Search 18 chapters, 13 studios, 200 draw lessons, exploded isometrics, product flows, markers & tax..." autocomplete="off" />
+        <button id="cmd-close" class="btn secondary">ESC</button>
+      </div>
+      <div id="cmd-results" class="cmd-results"></div>
+      <div class="modal-foot mono">
+        <span>↑↓ Navigate • Enter Open • [ / ] Prev/Next Ch</span>
+        <span id="cmd-count">220+ Indexed Items</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- GLOSSARY QUICK-POPOVER MODAL -->
+  <div id="gloss-modal" class="modal-overlay no-print" hidden>
+    <div class="modal-card modal-sm" role="dialog" aria-modal="true" aria-label="Glossary Term">
+      <div class="modal-head" style="justify-content:space-between;">
+        <span class="mono" style="font-size:11px; font-weight:700; color:var(--violet); text-transform:uppercase;">Glossary Reference</span>
+        <button id="gloss-close" class="btn secondary">✕</button>
+      </div>
+      <div id="gloss-body" class="modal-body"></div>
+    </div>
+  </div>
+
+  <!-- PROGRESS EXPORT / IMPORT MODAL -->
+  <div id="prog-modal" class="modal-overlay no-print" hidden>
+    <div class="modal-card modal-sm" role="dialog" aria-modal="true" aria-label="Export or Import Progress">
+      <div class="modal-head" style="justify-content:space-between;">
+        <span class="mono" style="font-size:11px; font-weight:700; color:var(--cyan); text-transform:uppercase;">Progress Backup &amp; Sync</span>
+        <button id="prog-close" class="btn secondary">✕</button>
+      </div>
+      <div class="modal-body" style="display:flex; flex-direction:column; gap:12px;">
+        <p style="font-size:14.5px; color:var(--ink-muted);">Your chapter completions, quiz scores, 14-day bootcamp streak, and studio notes are stored locally in this browser. Export a JSON snapshot to transfer between devices or browsers.</p>
+        <div style="display:flex; flex-wrap:wrap; gap:8px;">
+          <button id="btn-dl-json" class="btn mint">↓ Download JSON Backup</button>
+          <label class="btn secondary" style="cursor:pointer;">↑ Import JSON File<input id="inp-import-json" type="file" accept=".json" hidden /></label>
+          <button id="btn-reset-all" class="btn magenta">✕ Reset All Progress</button>
+        </div>
+        <div id="prog-status" class="mono" style="font-size:11.5px; color:var(--ink-muted);"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FLOATING BACK-TO-TOP & STATUS TOAST -->
+  <button id="btn-back-top" class="back-to-top no-print" aria-label="Scroll to top" hidden>↑ Top</button>
+  <div id="app-toast" class="toast-pill no-print" role="status" aria-live="polite" hidden></div>
+
+  <!-- DEDICATED PRINTABLE WORKBOOK MOUNT (SHOWN ONLY WHEN PRINTING A WORKSHEET) -->
+  <div id="workbook-print-mount" class="workbook-print-mount"></div>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

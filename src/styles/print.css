@@ -1,0 +1,53 @@
+/* =========================================================================
+   PRINT STYLES: CLEAN CHAPTER PRINT + A5/A4 PRACTICE WORKBOOK MODE
+   ========================================================================= */
+@media print {
+  @page {
+    size: auto;
+    margin: 10mm;
+  }
+
+  .toc-sidebar,
+  .toc-backdrop,
+  .reader-topbar,
+  .chapter-footer,
+  .modal-overlay,
+  .no-print {
+    display: none !important;
+  }
+
+  .reader-main {
+    margin-left: 0 !important;
+  }
+
+  .chapter-stage {
+    max-width: 100% !important;
+    padding: 0 !important;
+  }
+
+  .card,
+  .lab,
+  .quiz-box,
+  .mental-model,
+  .compare-card,
+  .studio-exercise,
+  .worked-example {
+    break-inside: avoid;
+  }
+
+  /* When printing a dedicated Practice Workbook Sheet */
+  body.printing-workbook .reader-shell {
+    display: none !important;
+  }
+
+  body.printing-workbook .workbook-print-mount {
+    display: block !important;
+    width: 100%;
+    background: #FFFFFF;
+  }
+
+  .wb-sheet {
+    page-break-after: always;
+    padding: 4mm;
+  }
+}
